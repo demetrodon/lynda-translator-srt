@@ -15,8 +15,10 @@ module LyndaTranslatorSrt
     srt_reader = SrtOriginal::Reader.new(srt_unzipper.path_unzip_folder).create_list_path_srt_files
 
     srt_reader.list_path_srt_files.each do |srt_path|
-      translated_srt = TranslatorSrt::GoogleTranslate.translate_srt_file LANG_LYNDA_SUBS, to_lang, srt_path
-      File.write srt_path, translated_srt
+      Thread.new do
+        translated_srt = TranslatorSrt::GoogleTranslate.translate_srt_file LANG_LYNDA_SUBS, to_lang, srt_path
+        File.write srt_path, translated_srt
+      end
     end
 
     params_zipper = {

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Vadim Poplavskiy']
   spec.email         = ['im@demetrodon.com']
   spec.summary       = %q{Downloader and translator subs to coursers Lynda.com}
-  spec.description   = ''
+  spec.description   = 'This is a Ruby library for translate the transcript courses lynda.com to other languages.'
   spec.homepage      = 'https://github.com/demetrodon/lynda-translator-srt'
   spec.license       = 'New BSD'
 
