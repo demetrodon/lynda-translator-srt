@@ -1,6 +1,6 @@
 # lynda-translator-srt
 
-This is a Ruby library for translate the transcript courses lynda.com to other languages.
+This is a Ruby library for translating the transcript courses lynda.com to other languages.
 Current functionality includes **Google Translate**.
 
 ## Installation
